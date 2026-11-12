@@ -105,7 +105,7 @@ jobs:
             GOOGLE_CLOUD_PROJECT_ID=${{ env.PROJECT_ID }}
             LANGFUSE_BASE_URL=https://us.cloud.langfuse.com
             OTEL_EXPORTER_OTLP_ENDPOINT=https://otlp-gateway-prod-sa-east-1.grafana.net/otlp
-          flags: --add-cloudsql-instances=${{ env.PROJECT_ID }}:${{ env.REGION }}:ai-researcher-db
+          flags: --add-cloudsql-instances=${{ env.PROJECT_ID }}:${{ env.REGION }}:ai-researcher-dg
           no_traffic: true
           tag: canary
 
@@ -132,7 +132,7 @@ jobs:
             GOOGLE_CLOUD_PROJECT_ID=${{ env.PROJECT_ID }}
             LANGFUSE_BASE_URL=https://us.cloud.langfuse.com
             OTEL_EXPORTER_OTLP_ENDPOINT=https://otlp-gateway-prod-sa-east-1.grafana.net/otlp
-          flags: --add-cloudsql-instances=${{ env.PROJECT_ID }}:${{ env.REGION }}:ai-researcher-db
+          flags: --add-cloudsql-instances=${{ env.PROJECT_ID }}:${{ env.REGION }}:ai-researcher-dg
 
       - name: Healthcheck da revisão nova
         run: |
